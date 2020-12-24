@@ -140,7 +140,7 @@ namespace math
     {
         double min_distance = 0.0;
         // the line-segment whether is a point
-        if (line_segment.getLenght() <= kMathEpsilon)
+        if (line_segment.getLength() <= kMathEpsilon)
         {
             return IsPointIn(line_segment.getStart());
         }
@@ -220,7 +220,7 @@ namespace math
                     min_distance =  Vertex2SegmentDistance( box_x, box_y, 
                                                             rotate_cs_x, rotate_cs_y, 
                                                             rotate_ce_x, rotate_ce_y, 
-                                                            line_segment.getLenght());
+                                                            line_segment.getLength());
                     break;
 
                 // (1, 0)
@@ -230,7 +230,7 @@ namespace math
                                  : Vertex2SegmentDistance( box_x, box_y,
                                                            rotate_cs_x, rotate_cs_y,
                                                            rotate_ce_x, rotate_ce_y,
-                                                           line_segment.getLenght());
+                                                           line_segment.getLength());
                     break;
 
                 // (1, -1)
@@ -239,11 +239,11 @@ namespace math
                                  ? Vertex2SegmentDistance( box_x, -box_y,
                                                            rotate_cs_x, rotate_cs_y,
                                                            rotate_ce_x, rotate_ce_y,
-                                                           line_segment.getLenght())
+                                                           line_segment.getLength())
                                  : Vertex2SegmentDistance( box_x, box_y,
                                                            rotate_cs_x, rotate_cs_y,
                                                            rotate_ce_x, rotate_ce_y,
-                                                           line_segment.getLenght());
+                                                           line_segment.getLength());
                     break;
                 
                 // (0, -1)
@@ -255,7 +255,7 @@ namespace math
                                  : Vertex2SegmentDistance( box_x, -box_y,
                                                            rotate_cs_x, rotate_cs_y,
                                                            rotate_ce_x, rotate_ce_y,
-                                                           line_segment.getLenght());
+                                                           line_segment.getLength());
                     break;
 
                 // (-1, -1)
@@ -266,7 +266,7 @@ namespace math
                                  ? Vertex2SegmentDistance( box_x, -box_y,
                                                            rotate_cs_x, rotate_cs_y,
                                                            rotate_ce_x, rotate_ce_y,
-                                                           line_segment.getLenght())
+                                                           line_segment.getLength())
 
                                  : math::CrossProduct({rotate_cs_x, rotate_cs_y}, 
                                                       {rotate_ce_x, rotate_ce_y},
@@ -275,7 +275,7 @@ namespace math
                                  : Vertex2SegmentDistance(-box_x, box_y,
                                                            rotate_cs_x, rotate_cs_y,
                                                            rotate_ce_x, rotate_ce_y,
-                                                           line_segment.getLenght());
+                                                           line_segment.getLength());
                     break;
 
                 default:
@@ -294,7 +294,7 @@ namespace math
                                  : Vertex2SegmentDistance( box_x, box_y,
                                                            rotate_cs_x, rotate_cs_y,
                                                            rotate_ce_x, rotate_ce_y,
-                                                           line_segment.getLenght());
+                                                           line_segment.getLength());
                     break;
 
                 // (1, 0)
@@ -312,7 +312,7 @@ namespace math
                                  : Vertex2SegmentDistance( box_x, box_y,
                                                            rotate_cs_x, rotate_cs_y,
                                                            rotate_ce_x, rotate_ce_y,
-                                                           line_segment.getLenght());
+                                                           line_segment.getLength());
                     break;
 
                 // (-1, 0)
@@ -332,7 +332,7 @@ namespace math
     bool Box2d::HasOverlap(const LineSegment2d &line_segment) const
     {
         // the line-segment whether is a point
-        if (line_segment.getLenght() <= kMathEpsilon)
+        if (line_segment.getLength() <= kMathEpsilon)
         {
             return IsPointIn(line_segment.getStart());
         }
